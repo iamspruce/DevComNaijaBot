@@ -31,7 +31,14 @@ function retweet(searchText) {
                     tweetIDList.push(tweet.id_str)
                 }
             }
+            // Utility function - Gives unique elements from an array
+            function onlyUnique(value, index, self) { 
+                return self.indexOf(value) === index;
+            }
 
+            // Get only unique entries
+            tweetIDList = tweetIDList.filter( onlyUnique );
+            
             // Call the 'statuses/retweet/:id' API endpoint for retweeting EACH of the tweetID
             for (let tweetID of tweetIDList) {
                 T.post('statuses/retweet/:id', {id : tweetID}, function(err_rt, data_rt, response_rt){
