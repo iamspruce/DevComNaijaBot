@@ -1,0 +1,14 @@
+{
+  "name": "spruce-twitter-bot",
+  "version": "1.0.0",
+  "description": "a twitter bot by spruce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "spruce",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
